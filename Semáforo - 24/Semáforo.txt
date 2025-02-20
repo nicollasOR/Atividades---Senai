@@ -1,0 +1,38 @@
+// C++ code
+//
+void setup()
+  #define A1 12
+  #define A2 9
+  #define V1 11
+  #define V2 8
+  #define R1 13
+  #define R2 10
+{
+  pinMode(A1, OUTPUT);
+  pinMode(A2, OUTPUT);
+  pinMode(V1, OUTPUT);
+  pinMode(V2, OUTPUT);
+  pinMode(R1, OUTPUT);
+  pinMode(R2, OUTPUT); 
+}
+
+void loop()
+{
+  digitalWrite(V1, HIGH); 
+  digitalWrite(R2, HIGH);
+  delay(5000);  
+  digitalWrite(V1,LOW);
+  digitalWrite(A1, HIGH);
+    delay(2000);
+  digitalWrite(R2, LOW);
+  digitalWrite(V1, LOW);
+  digitalWrite(A1, LOW);
+  digitalWrite(V2, HIGH);
+  digitalWrite(R1, HIGH);
+  delay(5000);
+     digitalWrite(V2, LOW);
+    digitalWrite(A2, HIGH);
+    delay(2000);
+    digitalWrite(A2, LOW);
+  digitalWrite(R1, LOW);
+}
