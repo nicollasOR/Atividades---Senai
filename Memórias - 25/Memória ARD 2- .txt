@@ -1,0 +1,22 @@
+// C++ code
+// Quando se usa "int e =" você cria uma variável dentro de um circuito, ou seja, dois vale 5
+
+int variavel = 500; // recebe é o = 
+unsigned int junior = 750;
+
+void setup()
+#define Dados 9600 
+{ // 9600 sao os bits utilizado
+  Serial.begin(Dados);
+  Serial.print("A variavel contem: "); //ln = Criar uma linha abaixo
+  Serial.println(junior);
+  junior = 32768;
+  Serial.print("Nao, voce devia dizer que e ");
+  Serial.println(junior);
+  
+}
+
+void loop()
+{
+
+}
