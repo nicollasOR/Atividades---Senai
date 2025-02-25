@@ -1,0 +1,42 @@
+// C++ code
+//
+int peso1 = 40;
+float resultado = 0;
+float altura1 = 1.8;
+float resultadoReal = 0;
+int peso2 = 100;
+float resultado2 =0;
+float altura2 = 1.9;
+
+void setup()
+{
+  Serial.begin(9600);
+ resultado = peso1 / sq(altura1);
+  Serial.println(resultado);
+  if(resultado < 18.5) {
+    Serial.println("Esta abaixo do peso");
+    Serial.println("Classificacao: Magreza");
+    
+  }else if(resultado >= 18.5 & resultado <= 24.9){
+    Serial.println("Esta no peso ideal");
+    Serial.println("Classificacao: Ideal");
+}else if(resultado >= 25 & resultado <= 29.9){
+  Serial.println("Esta acima do peso");
+  Serial.println("Classificacao: Acima do peso");
+}else if(resultado >= 30 & resultado <= 34.9){
+  Serial.println("Esta bem acima do peso");
+  Serial.println("Classificao: Obesidade I");
+}else if(resultado >= 35 & resultado <= 39.9){
+  Serial.println("Esta bemmmm acima do peso");
+  Serial.println("Classificao: Obesidade Ii");
+}else if(resultado >= 40){
+  Serial.println("Esta muito acima do peso");
+  Serial.println("Classificao: Obesidade II");
+       
+  }
+}
+
+void loop()
+{
+  
+}
