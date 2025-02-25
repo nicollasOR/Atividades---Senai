@@ -1,0 +1,118 @@
+// C++ code
+/* 
+Autor: Nicollas O R
+Data: 24;02;2025
+*/ 
+//                     DECLARAÇÃO DE VARIAVEIS GLOBAIS
+
+// Variável fora do baguio é global e dentro do baguio é somente aplicado dentro dele
+int numeroA = 10;
+int numeroB = 5;
+int resultado = 0;
+float resultadoReal = 0;
+
+void setup()
+{
+  Serial.begin(9600);
+  
+  // *****SOMA****
+  resultado = numeroB + numeroA;
+  Serial.print("a soma do numero A com o numero B eh: ");
+  Serial.println(resultado);
+  
+  // Subtração
+  resultado = numeroB - numeroA;
+  Serial.print("a subtracao do numero B com o A eh:");
+  Serial.println(resultado);
+  
+  // Multiplicação
+  
+  resultado = numeroA * numeroB;
+  Serial.print("O A multiplicado pelo B eh:");
+  Serial.println(resultado);
+  
+  // Divisão
+  resultado = numeroA/numeroB;
+  Serial.print("A divisao do B pelo A eh:");
+  Serial.println(resultado);
+  resultado = numeroA%numeroB;
+  Serial.println("e sobra:");
+  Serial.println(resultado);
+  Serial.print("A divisao do B pelo A eh:");
+  Serial.println(resultado);
+   resultado = numeroA/numeroB;
+  Serial.print("A divisao do B pelo A eh:");
+  Serial.println(resultado);
+  resultado = numeroA%numeroB;
+  Serial.println("e sobra: ");
+  Serial.println(resultado);
+  resultadoReal = (float)numeroA / (float)numeroB;
+  Serial.print("Ou ");
+  Serial.println(resultadoReal, 1); //limita a impressão do resultado 
+                                    //em uma casa decimal
+  
+  // Potência
+  resultado = pow(numeroA,numeroB); //'a' elevado a 'b'
+  Serial.print("numero A elevado a numero B eh: ");
+  Serial.println(resultado);
+  // Quadrado
+  resultado = sq(numeroA); // A ao quadrado
+  Serial.print("numero A elevado ao quadrado eh: ");
+  Serial.println(resultado);
+  
+  // Raiz Quadrada
+  resultado = sqrt(numeroA); // Raiz quadrada
+  Serial.print("A raiz quadrada de numero A eh: ");
+  Serial.println(resultadoReal); //tirar o que sobrou
+  
+  
+  // Modulo 
+  resultado = abs(numeroA * -1);
+  Serial.println(resultado);
+  
+  
+  // Restrição
+  resultado = constrain(numeroA, -3, 5); // restringe a varialvel numero A aos
+  Serial.println(resultado); // limites - 3 e 5
+  
+  
+// Remapeamento
+  resultado = map(numeroA, 0, 20, 0, 10); 
+  // map(valor, deMenor,deMaior, paraMenor, para Maior)
+  Serial.println(resultado);
+
+  //Operadores de Atribuição
+  // numero A = numero A + 5
+  Serial.println(numeroA += 5);
+  
+  // numero A = numero A - 5
+  Serial.println(numeroA -= 5);
+ 
+  // numero A = numero A * 5;
+  Serial.println(numeroA *= 2);
+  
+  // numero A = numero A / 2;
+  Serial.println(numeroA /= 2);
+  
+  //Incrementar a Variavel
+   //numeroA = numeroA +1
+  Serial.println(numeroA++); //pos incremento
+  Serial.println(++numeroA); //pré incremento
+  
+  //Decrementar a Variavel
+  //numeroA = numeroA - 1
+  Serial.println(numeroA--); // pos incremento
+  
+  Serial.println(--numeroA); // pre incremento
+  
+  resultadoReal = 3 * ( (2.0 / 5.0) + (3 * 2) );
+  Serial.println(resultadoReal);
+  
+}
+
+
+
+void loop()
+{
+
+}
