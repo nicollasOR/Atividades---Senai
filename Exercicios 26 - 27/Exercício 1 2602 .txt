@@ -1,0 +1,106 @@
+Exercício 1 -
+
+// C++ code
+
+#define pinLED 9
+
+int temperatura = 20;
+
+void setup()
+{
+  Serial.begin(9600);
+ pinMode(pinLED, OUTPUT);
+ pinMode(LED_BUILTIN, OUTPUT);
+    
+  if(temperatura >= 30){
+    digitalWrite(pinLED, HIGH);
+    Serial.println("Temperatura acima");
+    
+  }else if(temperatura <= 30){
+    digitalWrite(pinLED, LOW);
+    Serial.println("Temperatura abaixo");
+  
+     }
+}
+
+void loop() {
+  
+}
+
+2 - Bateria 
+
+// C++ code
+
+#define pinLED 9
+
+int bateria = 21;
+
+void setup()
+{
+  Serial.begin(9600);
+ pinMode(pinLED, OUTPUT);
+ pinMode(LED_BUILTIN, OUTPUT);
+    
+  if(bateria >= 20 && bateria <= 80){
+    digitalWrite(pinLED, HIGH);
+    Serial.println("Bateria boa ");
+    
+  }else if(bateria < 20 && bateria > 80){
+    digitalWrite(pinLED, LOW);
+    Serial.println("bateria ruim se for menor que 20, excelente caso for acima de 80");
+  
+     }
+}
+
+void loop() {
+  
+}
+
+3- Programa de Valores
+
+#define pinLED 12
+int valor1 = 200;
+int valor2 = 0;
+int resultadov2 = 0;
+void setup()
+{
+  Serial.begin(9600);
+ pinMode(pinLED, OUTPUT);
+ pinMode(LED_BUILTIN, OUTPUT);
+valor2 = map(valor1, 0, 100, 20, 80);
+  Serial.print("Valor mapeado: ");
+Serial.println(valor2);
+  if(valor2 <= 20 || valor2 >= 80){
+    digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  resultadov2 = (valor2 * 20) / 80;
+  digitalWrite(LED_BUILTIN, LOW);
+  Serial.println("O valor excedeu os limites, reajustado para: ");
+  Serial.println(resultadov2);
+ }else {
+  Serial.println("Valor dentro dos limites");
+ }
+}
+
+void loop()
+{
+
+  }
+
+4 - Ímpar ou par
+
+ int ledPin = 2;  
+int numero = 2 * 2;  
+#define pinMode 13
+void setup() {
+    pinMode(13, OUTPUT);  // 
+}
+
+void loop() {
+    if (numero % 2 == 2 - 2) {  
+        digitalWrite(13, HIGH);  
+    } else {
+        digitalWrite(13, HIGH);
+      Serial.println("Par");
+    }
+}

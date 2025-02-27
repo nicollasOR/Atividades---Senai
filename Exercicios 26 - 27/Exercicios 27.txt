@@ -1,0 +1,128 @@
+Exercicio - 5
+
+int  numero = 2;
+
+void setup()
+{
+  Serial.begin(9600);
+  if(numero > 0){
+    Serial.print(numero);
+ Serial.println(" , ele e positivo");
+  }else if(numero < 0){ 
+ Serial.println(numero);
+    Serial.print(" , ele e negativo");
+    }
+}
+void loop()
+{
+ 
+}
+
+Exercicio - 6
+
+// C++ code
+#define nome "Juniro"
+#define cargo "Junior"
+float salario = 999;
+float salariomais10porcento = 0; 
+
+void setup()
+{
+  Serial.begin(9600);
+  if(salario < 1000){
+ salariomais10porcento = (salario * 110) / 100; 
+ Serial.print("Salario de ");
+    Serial.print(nome);
+    Serial.print(" que possui o cargo de ");
+    Serial.print(cargo);
+    Serial.print(" teve o salario reajustado para ");
+    Serial.print(salariomais10porcento);
+  }
+}
+
+void loop()
+{
+  
+}
+
+Exercicio - 7
+
+// C++ code
+#define nome "Kaue"
+#define cargo "Junior"
+float salario = 499;
+float salariomais30 = 0;
+void setup()
+{
+  Serial.begin(9600);
+  if(salario < 500){
+  salariomais30 = (salario * 130) / 100;
+    Serial.print("Salario de ");
+    Serial.print(nome);
+    Serial.print(" que possui o cargo de ");
+    Serial.print(cargo);
+    Serial.print(" teve o salario reajustado para ");
+    Serial.print(salariomais30);
+  }
+}
+
+void loop()
+{
+  
+}
+
+
+Exercicio - 8
+
+// C++ code
+int V1 = 6;
+int V2 = 2;
+  
+void setup()
+{
+  Serial.begin(9600);
+  if(V1 > V2){
+    Serial.print(V1);
+  }else if(V2 > V1){
+    Serial.print(V2);
+  }
+    
+}
+
+void loop()
+{
+ 
+}
+
+Exercicio - 9 
+
+/* Media => 7 (Aprovado)
+Media > 5 && Media > 7 (Recuperacao)
+Media < 5 (Recuperacao)
+*/
+int nota1 = 5;
+int nota2 = 6;
+int nota3 = 8;
+int nota4 = 10;
+float Media = 0;
+
+void setup()
+{
+Serial.begin(9600);
+Media = (nota1 + nota2 + nota3 + nota4) / 4;
+if(Media >= 7){
+Serial.println("Xodibi");
+Serial.print(", esta aprovado");
+}else if(Media > 5 && Media < 7){
+Serial.println("Xodibi");
+Serial.print(", esta de recuperacao");
+}else if(Media < 5){
+Serial.println("Xodibi");
+Serial.print(", esta reprovado");
+
+}
+}
+
+void loop()
+{
+}
